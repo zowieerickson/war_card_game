@@ -9,5 +9,16 @@ function handleClick() {
             console.log(deckId)
         })
 }
+
+
+function drawCards() {
+    fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.cards)
+        })
+}
+
 setTimeout(() => console.log(deckId), 5000)
 document.querySelector("#new-deck").addEventListener("click", handleClick)
+document.querySelector("#draw-cards").addEventListener("click", drawCards)
