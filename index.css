@@ -50,6 +50,20 @@ main {
     align-self: flex-start;
 }
 
+#container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-slot {
+    height: 120px;
+    width: calc(120px * 5 / 7 );
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 /* #draw-cards {
     width: 100%;
     margin-top: auto;
