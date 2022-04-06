@@ -16,12 +16,12 @@ function drawCards() {
         .then(data => {
             let html = ''
             let cardsArr = data.cards
-            cardsArr.map(card => {
-                html += `
-                <img src=${card.image}>
+            const cardsContainer = document.querySelector("#container-cards");
+            for (let i = 0; i < cardsContainer.children.length; i ++) {
+                cardsContainer.children[i].innerHTML = `
+                    <img src=${data.cards[i].image} />
                 `
-            })
-            document.querySelector("#container-cards").innerHTML = html
+            }
             console.log(data.cards)
         })
 }
