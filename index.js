@@ -14,15 +14,12 @@ function drawCards() {
     fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
         .then(response => response.json())
         .then(data => {
-            let html = ''
-            let cardsArr = data.cards
             const cardsContainer = document.querySelector("#container-cards");
             for (let i = 0; i < cardsContainer.children.length; i ++) {
                 cardsContainer.children[i].innerHTML = `
                     <img src=${data.cards[i].image} />
                 `
             }
-            console.log(data.cards)
         })
 }
 
