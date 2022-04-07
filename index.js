@@ -6,6 +6,7 @@ function handleClick() {
         .then(data => {
             deckId = data.deck_id
             document.querySelector("#draw-cards").disabled = false;
+            document.querySelector("#remaining-cards").innerHTML = `Remaining cards: <span>${data.remaining}</span>`
         })
 }
 
@@ -14,6 +15,7 @@ function drawCards() {
     fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
         .then(response => response.json())
         .then(data => {
+            document.querySelector("#remaining-cards").innerHTML = `Remaining cards: <span>${data.remaining}</span>`
             const cardsContainer = document.querySelector("#container-cards");
             for (let i = 0; i < cardsContainer.children.length; i ++) {
                 cardsContainer.children[i].innerHTML = `
@@ -23,6 +25,8 @@ function drawCards() {
             handleCards(data.cards[0], data.cards[1])
             const winnerText = handleCards(data.cards[0], data.cards[1])
             document.querySelector("#winner-msg").textContent = winnerText
+
+            console.log(data)
         })
 }
 
