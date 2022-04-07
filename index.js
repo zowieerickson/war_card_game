@@ -21,7 +21,8 @@ function drawCards() {
                 `
             }
             handleCards(data.cards[0], data.cards[1])
-            document.querySelector("#winner-msg").innerHTML = handleCards(data.cards[0], data.cards[1])
+            const winnerText = handleCards(data.cards[0], data.cards[1])
+            document.querySelector("#winner-msg").textContent = winnerText
         })
 }
 
@@ -33,29 +34,12 @@ function handleCards(card1, card2) {
 
     const card1Value = cardValuesArr.indexOf(card1.value)
     const card2Value = cardValuesArr.indexOf(card2.value)
-
-    console.log(`Card 1 Value: ${card1Value}`)
-    console.log(`Card 2 Value: ${card2Value}`)
-
-    let text = ''
+ 
     if (card1Value > card2Value) {
-        text = 'Computer wins!'
-        return text
+        return 'Computer wins!'
     } else if (card1Value < card2Value) {
-        text = 'You win!'
-        return text
+        return 'You win!'
     } else {
-        text = 'War!'
-        return text
+        return 'War!'
     }
 }
-
-const card1Obj = {
-    value: 'ACE'
-}
-
-const card2Obj = {
-    value: 'JACK'
-}
-
-handleCards(card1Obj, card2Obj)
