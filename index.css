@@ -86,7 +86,13 @@ main {
     color: #fff
 }
 
-/* #draw-cards {
-    width: 100%;
-    margin-top: auto;
-} */
+.disabled {
+    background: gray;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background: gray;
+    color: fff;
+}
