@@ -69,6 +69,10 @@ main {
     height: 100%;
 }
 
+#winner-msg {
+    text-align: center;
+}
+
 /* #draw-cards {
     width: 100%;
     margin-top: auto;
