@@ -122,7 +122,6 @@ main {
     }
 
     .container-center {
-        /* flex-direction: row; */
         justify-content: center;
     }
 
