@@ -58,6 +58,14 @@ main {
     justify-content: space-between;
 }
 
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+
+
 #new-deck {
     align-self: flex-start;
 }

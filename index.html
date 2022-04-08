@@ -16,12 +16,17 @@
             <button id="new-deck" class="btn">New Deck</button>
             <p id="remaining-cards"></p>
         </header>
-        
+
         <h2 id="winner-msg">Game of War</h2>
-        <div id="container-cards">
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
+        <div class="container-center">
+            <h3>Computer Score: <span id="computer-score">0</span></h3>
+            <div id="container-cards">
+                <div class="card-slot"></div>
+                <div class="card-slot"></div>
+            </div>
+            <h3>User Score: <span id="user-score">0</span></h3>
         </div>
+        
         <button id="draw-cards" class="btn" disabled>Draw Cards</button>
     </main>
     <script src="index.js"></script>
